@@ -352,7 +352,7 @@ div.col-md-12{
  height:500px; /* 固定高度 */
 }
   
-thead tr th, p.tablesearch{
+thead tr,thead th, p.tablesearch{
  position:sticky;
  top:0; /* 列首永遠固定於上 */
 }
