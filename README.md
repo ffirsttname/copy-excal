@@ -4,7 +4,7 @@
 演示
 ![image](https://user-images.githubusercontent.com/87819805/126663777-3eb0cd90-2458-44a4-b1d0-b549355d382c.png)
 <br/>
-源碼HTML（外連）
+<h3>源碼HTML（外連）</h3>
 <br/>
 ```
 <!DOCTYPE html>
@@ -244,7 +244,7 @@ $(function () {
 
 ```
 
-<h4>自動捲動+標題置頂（選擇性）</h4>
+<h3>自動捲動+標題置頂（選擇性）</h3>
 
 ```
 <!--多左出來會自動捲動+標題置頂-->
