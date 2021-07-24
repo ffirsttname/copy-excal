@@ -243,3 +243,29 @@ $(function () {
 </html>
 
 ```
+
+<h4>自動捲動（選擇性）</h4>
+```
+<!--多左出來會自動捲動-->
+<style>
+div.col-md-12{
+ overflow:auto;
+ width:100%;
+ height:500px; /* 固定高度 */
+}
+  
+thead tr th {
+ position:sticky;
+ top:0; /* 列首永遠固定於上 */
+
+}
+  
+th:first-child{
+ z-index:2;
+}
+  
+/*<br/>先會換行*/
+#table * { white-space: pre; }
+</style>
+<!--多左出來會自動捲動-->
+```
