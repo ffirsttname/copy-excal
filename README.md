@@ -245,7 +245,7 @@ $(function () {
 
 ```
 
-<h3>自動捲動+標題置頂（選擇性）(需要加多個搜索+置頂[按我])</h3>
+<h3>自動捲動+標題置頂（選擇性）需要加多個搜索+置頂 <a href="#加多一個搜索框" rel="nofollow">按我</a></h3>
 
 ```
 <!--多左出來會自動捲動+標題置頂-->
@@ -344,7 +344,36 @@ data-table同table的class要一樣
 <h3>多左出來會自動捲動+搜索同標題置頂（選擇性）</h3>
 
 ```
+<!--多左出來會自動捲動-->
+<style>
+div.col-md-12{
+ overflow:auto;
+ width:100%;
+ height:500px; /* 固定高度 */
+}
+  
+thead tr th, p.tablesearch{
+ position:sticky;
+ top:0; /* 列首永遠固定於上 */
+}
+  
+thead tr,thead th {
+ top:29.3px; 
 
+}
+
+p.tablesearch{background-color: #DDDDDD;}
+  
+
+  
+th:first-child{
+ z-index:2;
+}
+  
+/*<br/>先會換行*/
+#table * { white-space: pre; }
+</style>
+<!--多左出來會自動捲動-->
 ```
 
 
