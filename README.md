@@ -283,7 +283,7 @@ th:first-child{
 data-table同table的class要一樣
 
 ```
-<p class="tablesearch">搜尋：<input type="search" class="light-table-filter" data-table="table table-bordered table-intel" placeholder="請輸入關鍵字"></p>
+<div class="tablesearch">搜尋：<input type="search" class="light-table-filter" data-table="table table-bordered table-intel" placeholder="請輸入關鍵字"></div>
 
 ```
 
@@ -352,7 +352,7 @@ div.col-md-12{
  height:500px; /* 固定高度 */
 }
   
-thead tr,thead th, p.tablesearch{
+thead tr,thead th, div.tablesearch{
  position:sticky;
  top:0; /* 列首永遠固定於上 */
 }
@@ -362,8 +362,9 @@ thead tr,thead th {
 
 }
 
-p.tablesearch{background-color: #DDDDDD;}
-  
+/*搜索欄樣式+不換行*/
+div.tablesearch{background-color: #DDDDDD;border:1px solid #AAAAAA;width:200px;white-space: pre;padding-right:43px}
+.tablesearch .light-table-filter{width:100%}
 
   
 th:first-child{
