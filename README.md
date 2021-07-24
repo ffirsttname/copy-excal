@@ -245,7 +245,7 @@ $(function () {
 
 ```
 
-<h3>自動捲動+標題置頂（選擇性）</h3>
+<h3>自動捲動+標題置頂（選擇性）(需要加多個搜索+置頂[按我])</h3>
 
 ```
 <!--多左出來會自動捲動+標題置頂-->
@@ -271,3 +271,80 @@ th:first-child{
 </style>
 <!--多左出來會自動捲動-->
 ```
+
+<h3>加多一個搜索框</h3>
+找到
+
+```
+<h2>Table 1</h2>
+```
+
+下面添加 
+data-table同table的class要一樣
+
+```
+<p class="tablesearch">搜尋：<input type="search" class="light-table-filter" data-table="table table-bordered table-intel" placeholder="請輸入關鍵字"></p>
+
+```
+
+之後<script> 與 </script>添加以下程式碼
+
+```
+<!--增加多一個資料搜尋-->
+<script>
+  (function(document) {
+  'use strict';
+
+  // 建立 LightTableFilter
+  var LightTableFilter = (function(Arr) {
+
+    var _input;
+
+    // 資料輸入事件處理函數
+    function _onInputEvent(e) {
+      _input = e.target;
+      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+      Arr.forEach.call(tables, function(table) {
+        Arr.forEach.call(table.tBodies, function(tbody) {
+          Arr.forEach.call(tbody.rows, _filter);
+        });
+      });
+    }
+
+    // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
+    function _filter(row) {
+      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+    }
+
+    return {
+      // 初始化函數
+      init: function() {
+        var inputs = document.getElementsByClassName('light-table-filter');
+        Arr.forEach.call(inputs, function(input) {
+          input.oninput = _onInputEvent;
+        });
+      }
+    };
+  })(Array.prototype);
+
+  // 網頁載入完成後，啟動 LightTableFilter
+  document.addEventListener('readystatechange', function() {
+    if (document.readyState === 'complete') {
+      LightTableFilter.init();
+    }
+  });
+
+})(document);
+  </script>
+<!--增加多一個資料搜尋-->
+```
+
+
+<h3>多左出來會自動捲動+搜索同標題置頂（選擇性）</h3>
+
+```
+
+```
+
+
