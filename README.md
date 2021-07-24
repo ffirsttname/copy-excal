@@ -363,9 +363,8 @@ thead tr,thead th {
 }
 
 /*搜索欄樣式+不換行*/
-div.tablesearch{background-color: #DDDDDD;border:1px solid #AAAAAA;width:200px;white-space: pre;padding-right:43px}
-.tablesearch .light-table-filter{width:100%}
-
+div.tablesearch{background-color: #DDDDDD;border:1px solid #AAAAAA;width:200px;white-space: pre;padding-left:5px;padding-right:45px}
+.tablesearch .light-table-filter{width:100%;border: 1px solid;}
   
 th:first-child{
  z-index:2;
