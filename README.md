@@ -245,7 +245,7 @@ $(function () {
 
 ```
 
-<h3>修改表格不要搜索/篩選/排序 條改搜索嘅名等</h3>
+<h3>修改表格不要搜索/篩選/排序 條改搜索嘅名等 修改篩選高度</h3>
 
 修改表格不要搜索/篩選/排序<br/>
 可以將原來```<th class="filter">姓名</th>```中的filter條改
@@ -265,6 +265,14 @@ $(function () {
 	'captions':{ a_to_z: '昇冪排列', z_to_a: '降冪排列', search: '搜索', select_all: '全部選擇' }
 });
 </script>
+```
+
+在<style>和</style>之間加入以下程式碼，200px就係佢個高度，原本預設係400px
+
+```
+.checkbox-container{
+  max-height:200px;
+}
 ```
 
 <h3>自動捲動+標題置頂（選擇性）需要加多個搜索+置頂 <a href="#加多一個搜索框" rel="nofollow">按我</a></h3>
