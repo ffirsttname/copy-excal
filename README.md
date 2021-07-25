@@ -245,6 +245,28 @@ $(function () {
 
 ```
 
+<h3>修改表格不要搜索/篩選/排序 條改搜索嘅名等</h3>
+
+修改表格不要搜索/篩選/排序<br/>
+可以將原來```<th class="filter">姓名</th>```中的filter條改
+
+例如原本
+```<th class="filter">姓名</th>```改為```<th class="no-sort no-filter">姓名</th>>```
+
+```no-sort```代表不排序
+```no-filter```代表不篩選
+```no-search```代表不搜索
+
+修改搜索嘅名等（原文已添加）
+```
+<script type="text/javascript">
+$(function () {
+  $('#table').excelTableFilter({
+	'captions':{ a_to_z: '昇冪排列', z_to_a: '降冪排列', search: '搜索', select_all: '全部選擇' }
+});
+</script>
+```
+
 <h3>自動捲動+標題置頂（選擇性）需要加多個搜索+置頂 <a href="#加多一個搜索框" rel="nofollow">按我</a></h3>
 
 ```
