@@ -16,10 +16,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>仿Excel樣式的jquery表格排序外掛程式</title>
 	
-	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" href="https://ffirsttname.github.io/copy-excal/css/demo.css">
-	<link rel="stylesheet" href="https://ffirsttname.github.io/copy-excal/dist/excel-bootstrap-table-filter-style.css" />
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ffirsttname/copy-excal/css/demo.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ffirsttname/copy-excal/dist/excel-bootstrap-table-filter-style.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ffirsttname/copy-excal/dist/excel-bootstrap-table-filter-bundle.js"></script>
 	
 </head>
 <body>
